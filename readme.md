@@ -1,4 +1,4 @@
-#Siametrics Backend Testing
+# Siametrics Backend Testing
 
 ## Algorithm Testing
 ##### 1. What is Big(O) of this function, and show how to calculate
@@ -61,7 +61,7 @@ Output
 ## Database Testing
 
 ##### 1. Please explain what is the best situation to use NoSql or Sql
-##### 2. Create a Class Diagram for Food Delivery Service according to below instruction.
+##### 2. Create a Class Diagram for Food Delivery Service according to the below instructions.
 
 1. Food delivery has 2 user type, first one is Rider and second one is Customer.
 2. Clearly that Customer can order a food but don't forget that Rider can also order the food as well.
