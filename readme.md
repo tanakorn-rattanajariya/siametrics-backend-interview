@@ -26,6 +26,30 @@ function search(array, item) {
     return -1;
 }
 ```
+##### 2. Write an algolithm to solve this question
+Imagine a grid of size 10x10 with a total of 100 boxes 
+
+Each box has a label attached to it, starting with “0-0” as the box on the most bottom left, “1-0” as the box to the right of “0-0” and “0-1” as the box to the top of “0-0” as shown in figure 1. 
+
+A QxQ box set collection is defined as a list of Q*Q box set starting from the most bottom left of the grid. For example, a 2x2 box collection includes {“0-0”, “1-0”, “0-1”, “1-1”}, {“2-1”, “3-1”, “2-0”, “3-0”}, {“0-2”,”0-3”,”1-2”,”1-3”}, and so on to cover the entire grid. The smallest possible Q value is 1.
+
+The centroid of a box set is defined as the center coordinate of the boxes in the set. For example, the centroid of box set with a single box “1-0” is (1.5,0.5). The centroid of {“0-0”, “1-0”, “0-1”, “1-1”} is (1,1). The centroid of {“0-0”, “1-0”, “2-0”, “0-1”, “1-1”, “2-1”, “0-2”, “1-2”, “2-2”} is (1.5,1.5). 
+
+![image info](./image1.png)
+  Figure 1
+
+##### Task:
+
+Write a python function that accepts 2 parameters:
+1. Grid size (G) - If G is 100, then we are dealing with a 100x100 grid
+2. Box set dimension (D) - This is the dimension of the box set. If D is 2, then we are dealing with a list of 2x2 Box Set
+
+Based on the input parameters, your python function will compute f(p,q) = p*p+q for each of the individual G*G boxes in the grid where p and q are the centroid coordinate of each box’s corresponding box set. The output of the python function will be a python dictionary with a set of box names and their corresponding f(p,q) values.
+
+For example, if G is 10 and if D is 2, we are considering a 10x10 grid and 2x2 box set. In this case, each of boxes “0-2”, “0-3”, “1-2”, “1-3” will have p = 1, q = 3, since the centroid of {“0-2”, “0-3”, “1-2”, “1-3”} is (1,3). Also since G is 10, the function will have to compute the f(p,q) values for all the 10*10=100 boxes.
+
+If G is not divisible by D, then your function can return -1.
+
 ## SQL Testing
 ##### 1. Write a SQL query to get the second highest salary for each department from the Employee and Department table.
 ```
@@ -57,14 +81,3 @@ Output
 | Development         | 300    |
 +---------------------+--------+
 ```
-
-## Database Testing
-
-##### 1. Please explain what is the best situation to use NoSql or Sql
-##### 2. Create a Class Diagram for Food Delivery Service according to the below instructions.
-
-1. Food delivery has 2 user type, first one is Rider and second one is Customer.
-2. Clearly that Customer can order a food but don't forget that Rider can also order the food as well.
-3. Attribute for Rider is name, phone, username and rating score
-4. Attribute for Customer is name, phone, username
-5. One order is contains restaurant name, food name, customer who order the food, rider
